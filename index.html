@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Health Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark">CH</span>
+          <div>
+            <p class="eyebrow">Investor Prototype</p>
+            <h1>Campus Health</h1>
+          </div>
+        </div>
+        <div class="top-actions">
+          <a href="#experience" class="ghost-link">Explore product</a>
+          <button class="primary-btn" type="button" data-scroll-target="demo">View live flow</button>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow accent">Student wellness, finally productized</p>
+          <h2>Turning campus insurance into a care experience students actually use.</h2>
+          <p class="hero-text">
+            A B2B2C platform for colleges that bundles insurance, OPD access, annual checkups,
+            counseling, and a 24x7 AI buddy into one student-first mobile product.
+          </p>
+          <div class="hero-cta-row">
+            <button class="primary-btn" type="button" data-scroll-target="demo">Start student journey</button>
+            <button class="secondary-btn" type="button" data-scroll-target="dashboard">See college dashboard</button>
+          </div>
+          <div class="hero-stats">
+            <article>
+              <strong>40M+</strong>
+              <span>college students in India</span>
+            </article>
+            <article>
+              <strong>6</strong>
+              <span>bundled benefits in one app</span>
+            </article>
+            <article>
+              <strong>₹0</strong>
+              <span>upfront student cost</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="floating-card pulse">
+            <p class="mini-label">Today</p>
+            <h3>How are you feeling?</h3>
+            <p class="mini-copy">AI Buddy can help with stress, explain benefits, or book a session in under 2 minutes.</p>
+            <div class="chat-pills">
+              <span>Explain my coverage</span>
+              <span>I need to talk to someone</span>
+              <span>Book OPD visit</span>
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-header">
+              <span class="signal"></span>
+              <span class="signal short"></span>
+              <span class="battery"></span>
+            </div>
+            <div class="phone-screen">
+              <section class="screen-card bright">
+                <p class="mini-label">Coverage card</p>
+                <h3>2 OPD visits left</h3>
+                <p>1 health checkup pending • 4 therapy sessions remaining</p>
+              </section>
+              <section class="screen-card">
+                <p class="mini-label">Next step</p>
+                <div class="task-row">
+                  <div>
+                    <strong>Tele-consultation</strong>
+                    <span>Today, 6:30 PM</span>
+                  </div>
+                  <button class="chip-btn" type="button">Join</button>
+                </div>
+              </section>
+              <section class="screen-card">
+                <p class="mini-label">Buddy insight</p>
+                <p class="quote">"You've mentioned exam stress three nights in a row. Want me to book a counselor?"</p>
+              </section>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="trust-strip">
+        <div>
+          <span class="metric">Student</span>
+          <p>Self-serve care, simple language, no PDF hunting.</p>
+        </div>
+        <div>
+          <span class="metric">Parent</span>
+          <p>Visibility into support usage and peace of mind from any city.</p>
+        </div>
+        <div>
+          <span class="metric">College</span>
+          <p>A modern wellbeing layer with aggregated engagement analytics.</p>
+        </div>
+      </section>
+
+      <section class="section problem-solution" id="experience">
+        <div class="section-heading">
+          <p class="eyebrow accent">Why this matters</p>
+          <h2>Insurance is sold to colleges, but the product experience has to win students.</h2>
+        </div>
+        <div class="problem-solution-grid">
+          <article class="issue-card">
+            <span class="issue-kicker">Problem</span>
+            <h3>Invisible coverage</h3>
+            <p>Students rarely know what they have, when to use it, or whether OPD, therapy, and emergency care are covered.</p>
+          </article>
+          <article class="issue-card">
+            <span class="issue-kicker">Solution</span>
+            <h3>Guided health concierge</h3>
+            <p>Campus Health turns benefits into clear cards, instant booking flows, and a 24x7 companion with escalation paths.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section benefits">
+        <div class="section-heading inline">
+          <div>
+            <p class="eyebrow accent">Six-in-one bundle</p>
+            <h2>Prototype the core value proposition with benefit cards that feel ready for pilots.</h2>
+          </div>
+          <div class="benefit-selector" role="tablist" aria-label="Benefits">
+            <button class="benefit-tab active" type="button" data-benefit="insurance">Insurance</button>
+            <button class="benefit-tab" type="button" data-benefit="opd">OPD</button>
+            <button class="benefit-tab" type="button" data-benefit="checkup">Checkup</button>
+            <button class="benefit-tab" type="button" data-benefit="therapy">Therapy</button>
+            <button class="benefit-tab" type="button" data-benefit="buddy">AI Buddy</button>
+            <button class="benefit-tab" type="button" data-benefit="literacy">Literacy</button>
+          </div>
+        </div>
+        <div class="benefit-stage">
+          <article class="benefit-panel active" data-panel="insurance">
+            <div>
+              <p class="mini-label">Health Insurance</p>
+              <h3>Explain coverage in plain language, not policy jargon.</h3>
+              <p>Students see what is covered, what to do next, and which path fits the situation: self-care, OPD, counselor, or ER.</p>
+            </div>
+            <ul class="feature-list">
+              <li>Digital coverage card</li>
+              <li>Claim guidance in conversational language</li>
+              <li>Escalation paths for urgent care</li>
+            </ul>
+          </article>
+          <article class="benefit-panel" data-panel="opd">
+            <div>
+              <p class="mini-label">2 Free OPD Visits</p>
+              <h3>Book a clinic or tele-consult in a few taps.</h3>
+              <p>Ideal for fevers, infections, stomach issues, or anything students would otherwise ignore until it gets worse.</p>
+            </div>
+            <ul class="feature-list">
+              <li>Near-campus provider discovery</li>
+              <li>Digital booking confirmation</li>
+              <li>Parent-visible appointment history</li>
+            </ul>
+          </article>
+          <article class="benefit-panel" data-panel="checkup">
+            <div>
+              <p class="mini-label">Annual Health Checkup</p>
+              <h3>Move from reactive care to early intervention.</h3>
+              <p>A full-body check and lightweight wellness assessments for sleep, stress, and nutrition help colleges spot real patterns.</p>
+            </div>
+            <ul class="feature-list">
+              <li>Checkup scheduling</li>
+              <li>Report vault with trends</li>
+              <li>Campus-wide participation analytics</li>
+            </ul>
+          </article>
+          <article class="benefit-panel" data-panel="therapy">
+            <div>
+              <p class="mini-label">6 Psychology Sessions</p>
+              <h3>Counseling that feels normal, private, and available.</h3>
+              <p>Students can book around exams, homesickness, relationships, and adjustment stress without chasing overloaded campus centers.</p>
+            </div>
+            <ul class="feature-list">
+              <li>Therapist matching</li>
+              <li>Session reminders</li>
+              <li>Escalation to human support when risk is detected</li>
+            </ul>
+          </article>
+          <article class="benefit-panel" data-panel="buddy">
+            <div>
+              <p class="mini-label">24x7 AI Buddy</p>
+              <h3>An always-on companion that supports, screens, and routes.</h3>
+              <p>The AI buddy handles questions, identifies patterns, and recommends human follow-up with safety guardrails.</p>
+            </div>
+            <ul class="feature-list">
+              <li>Stress check-ins</li>
+              <li>Insurance and benefit Q&A</li>
+              <li>Risk-aware escalation flows</li>
+            </ul>
+          </article>
+          <article class="benefit-panel" data-panel="literacy">
+            <div>
+              <p class="mini-label">Insurance Literacy</p>
+              <h3>Teach usage with cards, not documents.</h3>
+              <p>Small explainers help students and parents understand everyday terms, access rules, and how to get help fast.</p>
+            </div>
+            <ul class="feature-list">
+              <li>What counts as OPD vs ER</li>
+              <li>Contextual FAQs during booking</li>
+              <li>Multilingual micro-guides</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section demo-section" id="demo">
+        <div class="section-heading">
+          <p class="eyebrow accent">Clickable flow</p>
+          <h2>Walk through a student health moment from concern to care.</h2>
+        </div>
+        <div class="demo-grid">
+          <article class="journey-card">
+            <div class="journey-steps">
+              <button class="journey-step active" type="button" data-step="1">1. Feeling unwell</button>
+              <button class="journey-step" type="button" data-step="2">2. AI guidance</button>
+              <button class="journey-step" type="button" data-step="3">3. Book care</button>
+              <button class="journey-step" type="button" data-step="4">4. Follow-up</button>
+            </div>
+            <div class="journey-panels">
+              <article class="journey-panel active" data-step-panel="1">
+                <p class="mini-label">Student app</p>
+                <h3>"I have a fever before finals. What should I do?"</h3>
+                <p>The student opens Campus Health instead of calling home or ignoring symptoms.</p>
+              </article>
+              <article class="journey-panel" data-step-panel="2">
+                <p class="mini-label">AI Buddy</p>
+                <h3>Buddy clarifies urgency and benefit eligibility.</h3>
+                <p>It explains that this is a likely OPD use case, confirms remaining visits, and offers nearby options.</p>
+              </article>
+              <article class="journey-panel" data-step-panel="3">
+                <p class="mini-label">Booking flow</p>
+                <h3>One-tap booking for tele-consult or clinic.</h3>
+                <p>The student picks tele-consult for tonight, receives a confirmation, and sees the coverage cost as ₹0.</p>
+              </article>
+              <article class="journey-panel" data-step-panel="4">
+                <p class="mini-label">Recovery loop</p>
+                <h3>Reports, reminders, and parent visibility.</h3>
+                <p>Follow-up recommendations and visit history are stored, while parents can see support was used without reading sensitive notes.</p>
+              </article>
+            </div>
+          </article>
+
+          <aside class="simulator-card">
+            <div class="sim-header">
+              <p class="mini-label">Prototype simulator</p>
+              <div class="status-pill" id="flowStatus">Ready to guide</div>
+            </div>
+            <div class="chat-window" id="chatWindow">
+              <div class="bubble user">I feel sick and I have exams tomorrow.</div>
+              <div class="bubble bot">You may be eligible for a free OPD consultation. Would you like tele-consult or nearby clinic options?</div>
+            </div>
+            <div class="sim-actions">
+              <button class="choice-btn" type="button" data-choice="opd">Use free OPD visit</button>
+              <button class="choice-btn" type="button" data-choice="therapy">Talk to counselor</button>
+              <button class="choice-btn" type="button" data-choice="coverage">Explain coverage</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section personas">
+        <div class="section-heading inline">
+          <div>
+            <p class="eyebrow accent">Three-sided product</p>
+            <h2>One system, tailored surfaces for each stakeholder.</h2>
+          </div>
+          <div class="persona-tabs" role="tablist" aria-label="Audience views">
+            <button class="persona-tab active" type="button" data-persona="student">Student</button>
+            <button class="persona-tab" type="button" data-persona="parent">Parent</button>
+            <button class="persona-tab" type="button" data-persona="college">College</button>
+          </div>
+        </div>
+        <div class="persona-stage">
+          <article class="persona-panel active" data-persona-panel="student">
+            <h3>Feel supported, not lost.</h3>
+            <p>Students get plain-language guidance, self-serve booking, therapy access, and an AI buddy that helps without adding friction.</p>
+            <div class="persona-points">
+              <span>Coverage cards</span>
+              <span>OPD booking</span>
+              <span>Therapy sessions</span>
+              <span>Private support</span>
+            </div>
+          </article>
+          <article class="persona-panel" data-persona-panel="parent">
+            <h3>Peace of mind from any city.</h3>
+            <p>Parents see appointment status, checkup completion, and reassurance that support exists, while student privacy remains intact.</p>
+            <div class="persona-points">
+              <span>Dependent visibility</span>
+              <span>Booking confirmations</span>
+              <span>Report access</span>
+              <span>Confidence in hostel life</span>
+            </div>
+          </article>
+          <article class="persona-panel" data-persona-panel="college">
+            <h3>Differentiate and reduce risk.</h3>
+            <p>Admins access anonymized trends across uptake, counseling demand, OPD utilization, and wellness participation.</p>
+            <div class="persona-points">
+              <span>Utilization dashboard</span>
+              <span>Dropout-risk signals</span>
+              <span>Wellbeing branding</span>
+              <span>Campus care analytics</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section dashboard" id="dashboard">
+        <div class="section-heading">
+          <p class="eyebrow accent">College dashboard</p>
+          <h2>Mock the B2B layer investors and pilot partners will expect to see.</h2>
+        </div>
+        <div class="dashboard-grid">
+          <article class="analytics-card wide">
+            <div class="card-topline">
+              <div>
+                <p class="mini-label">Pilot snapshot</p>
+                <h3>North City University</h3>
+              </div>
+              <span class="trend-badge positive">+18% monthly activation</span>
+            </div>
+            <div class="kpi-grid">
+              <div class="kpi-card">
+                <strong>5,280</strong>
+                <span>Active students</span>
+              </div>
+              <div class="kpi-card">
+                <strong>68%</strong>
+                <span>Benefit awareness</span>
+              </div>
+              <div class="kpi-card">
+                <strong>41%</strong>
+                <span>Mental wellness engagement</span>
+              </div>
+              <div class="kpi-card">
+                <strong>92%</strong>
+                <span>Booking completion rate</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <p class="mini-label">Utilization mix</p>
+            <div class="bars">
+              <div class="bar-row"><span>OPD visits</span><div><i style="width: 72%"></i></div></div>
+              <div class="bar-row"><span>Therapy sessions</span><div><i style="width: 54%"></i></div></div>
+              <div class="bar-row"><span>AI buddy check-ins</span><div><i style="width: 86%"></i></div></div>
+              <div class="bar-row"><span>Checkup completion</span><div><i style="width: 49%"></i></div></div>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <p class="mini-label">Signals this month</p>
+            <ul class="signal-list">
+              <li>Exam-week stress spikes in first-year hostels</li>
+              <li>OPD demand highest near engineering block</li>
+              <li>Checkup uptake stronger when pushed via mentors</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section business-model">
+        <div class="section-heading">
+          <p class="eyebrow accent">Business model</p>
+          <h2>A prototype story that maps cleanly to the deck’s B2B2C strategy.</h2>
+        </div>
+        <div class="model-grid">
+          <article>
+            <span class="metric">Per-student license</span>
+            <p>Colleges pay an annual platform fee that activates the full student experience.</p>
+          </article>
+          <article>
+            <span class="metric">Insurance revenue share</span>
+            <p>Licensed insurer underwrites the health cover while Campus Health drives engagement and usage.</p>
+          </article>
+          <article>
+            <span class="metric">Premium upgrades</span>
+            <p>Additional sessions, specialist consults, and wellness packs create expansion revenue.</p>
+          </article>
+          <article>
+            <span class="metric">Aggregated analytics</span>
+            <p>Anonymized dashboards help colleges invest in wellbeing with clearer evidence.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
