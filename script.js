@@ -11,19 +11,19 @@ const flowStatus = document.getElementById("flowStatus");
 
 const chatScenarios = {
   opd: [
-    { speaker: "user", text: "I have a fever and need help tonight." },
-    { speaker: "bot", text: "You still have 2 free OPD visits. I found a tele-consult slot at 6:30 PM and a clinic 900 meters from campus." },
-    { speaker: "bot", text: "Your booking can be fully covered. Want me to confirm the tele-consult now?" }
+    { speaker: "user", text: "I have a fever tonight and I don't know what to do." },
+    { speaker: "bot", text: "Campus Health includes 1 OPD consultation, and it's still available for you." },
+    { speaker: "bot", text: "I found a tele-consult slot at 6:30 PM and a nearby clinic option. Want me to confirm the tele-consult?" }
   ],
   therapy: [
     { speaker: "user", text: "I've been anxious for days and can't focus." },
-    { speaker: "bot", text: "I'm here with you. You have 4 counseling sessions left, and I can help you book one privately." },
-    { speaker: "bot", text: "The earliest therapist opening is tomorrow at 11:00 AM. If this feels urgent or unsafe, I can escalate to a human counselor right away." }
+    { speaker: "bot", text: "I'm here with you. You still have 2 counseling sessions in your plan, and I can help you book one privately." },
+    { speaker: "bot", text: "The earliest opening is tomorrow at 11:00 AM. If this feels urgent or unsafe, I can escalate to a human counselor right away." }
   ],
   coverage: [
-    { speaker: "user", text: "What does my insurance actually cover?" },
-    { speaker: "bot", text: "Your plan includes inpatient insurance, 2 OPD consultations, 1 annual health checkup, and 6 counseling sessions." },
-    { speaker: "bot", text: "For fever, stomach issues, and minor infections, OPD is the right starting point. Emergencies like severe breathing trouble should go straight to the ER." }
+    { speaker: "user", text: "What does my plan actually include?" },
+    { speaker: "bot", text: "Campus Health includes 2 counseling sessions, 1 OPD consultation, insurance guidance, and AI Buddy support." },
+    { speaker: "bot", text: "For stress or anxiety, counseling is the right path. For fever or stomach issues, start with OPD. Emergencies should go straight to the ER." }
   ]
 };
 
@@ -74,9 +74,9 @@ choiceButtons.forEach((button) => {
 
     if (flowStatus) {
       const labels = {
-        opd: "OPD flow ready",
-        therapy: "Counseling escalation ready",
-        coverage: "Coverage explained"
+        opd: "OPD consult ready",
+        therapy: "Counseling flow ready",
+        coverage: "Plan explained"
       };
       flowStatus.textContent = labels[button.dataset.choice] || "Ready to guide";
     }

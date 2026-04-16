@@ -83,6 +83,7 @@ p {
 .simulator-card,
 .persona-stage,
 .analytics-card,
+.plan-card,
 .model-grid article,
 .issue-card {
   backdrop-filter: blur(14px);
@@ -112,7 +113,6 @@ p {
 .journey-steps,
 .sim-actions,
 .persona-tabs,
-.persona-points,
 .card-topline,
 .kpi-grid {
   display: flex;
@@ -207,6 +207,7 @@ p {
 .problem-solution-grid,
 .demo-grid,
 .dashboard-grid,
+.pricing-grid,
 .model-grid {
   display: grid;
   gap: 20px;
@@ -274,6 +275,7 @@ p {
 .simulator-card,
 .persona-stage,
 .analytics-card,
+.plan-card,
 .model-grid article {
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -372,19 +374,36 @@ p {
 
 .chat-pills span,
 .persona-points span {
-  padding: 10px 12px;
-  border-radius: 999px;
+  padding: 14px 16px;
+  border-radius: 20px;
   background: rgba(207, 238, 227, 0.66);
   color: var(--surface-ink);
   font-weight: 700;
   font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.persona-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+.persona-points span {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 58px;
 }
 
 .trust-strip,
 .benefit-stage,
 .journey-card,
 .simulator-card,
-.persona-stage {
+.persona-stage,
+.plan-card {
   background: var(--surface);
   border-radius: var(--radius-xl);
 }
@@ -416,9 +435,30 @@ p {
   gap: 20px;
 }
 
+.benefits .section-heading h2 {
+  max-width: 920px;
+}
+
 .section-heading h2 {
   font-size: clamp(2rem, 4vw, 3.4rem);
   max-width: 860px;
+}
+
+.price-kicker {
+  min-width: 220px;
+  padding: 20px 24px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(20, 54, 47, 0.96), rgba(31, 138, 112, 0.92));
+  color: #effcf7;
+  box-shadow: 0 24px 44px rgba(16, 92, 75, 0.22);
+}
+
+.price-kicker span {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+  margin-bottom: 6px;
 }
 
 .problem-solution-grid {
@@ -431,13 +471,46 @@ p {
   background: rgba(255, 250, 244, 0.78);
 }
 
-.benefit-stage {
-  padding: 22px;
+.pricing-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
 }
 
-.benefit-selector,
+.plan-card {
+  padding: 24px;
+}
+
+.plan-card.featured {
+  background:
+    radial-gradient(circle at top right, rgba(236, 191, 98, 0.18), transparent 30%),
+    linear-gradient(180deg, rgba(255, 250, 244, 0.96), rgba(248, 255, 251, 0.9));
+}
+
+.plan-head {
+  margin-bottom: 18px;
+}
+
+.plan-head p:last-child,
+.plan-note {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.plan-card .persona-points {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.benefit-stage {
+  padding: 22px;
+  display: grid;
+  gap: 18px;
+}
+
 .persona-tabs {
-  justify-content: flex-end;
+  justify-content: flex-start;
+  gap: 14px;
+  padding-bottom: 4px;
 }
 
 .benefit-selector {
@@ -445,10 +518,9 @@ p {
   justify-content: flex-start;
   align-items: center;
   gap: 14px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 4px 2px 8px;
+  flex-wrap: wrap;
+  overflow: visible;
+  padding: 0;
   scrollbar-width: thin;
 }
 
@@ -488,7 +560,8 @@ p {
 .journey-panel h3,
 .persona-panel h3,
 .analytics-card h3,
-.floating-card h3 {
+.floating-card h3,
+.plan-card h3 {
   font-family: var(--font-display);
   font-size: 1.9rem;
   line-height: 1.08;
@@ -586,7 +659,10 @@ p {
 }
 
 .persona-stage {
-  min-height: 240px;
+  min-height: 280px;
+  padding: 22px;
+  display: grid;
+  gap: 18px;
 }
 
 .dashboard-grid {
@@ -652,6 +728,7 @@ p {
   .hero-grid,
   .demo-grid,
   .dashboard-grid,
+  .pricing-grid,
   .model-grid {
     grid-template-columns: 1fr;
   }
@@ -667,8 +744,16 @@ p {
     justify-content: flex-start;
   }
 
+  .persona-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-panel {
     min-height: auto;
+  }
+
+  .price-kicker {
+    min-width: 0;
   }
 }
 
@@ -689,6 +774,26 @@ p {
   .trust-strip,
   .problem-solution-grid {
     grid-template-columns: 1fr;
+  }
+
+  .persona-tabs {
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .benefit-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .benefit-tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .persona-points {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .benefit-panel {
